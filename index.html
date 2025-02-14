@@ -21,54 +21,11 @@
             border-radius: 15px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            transition: opacity 1.5s ease-in-out;
+            opacity: 1;
         }
 
         h1 {
             color: #333;
             font-size: 24px;
-            margin: 0;
-        }
-
-        .visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-    </style>
-</head>
-<body>
-    <div class="card" id="card">
-        <h1 id="message">🎉 ¡VIAJAMOS EL SÁBADO 22 DE MARZO! 🎉</h1>
-    </div>
-
-    <script>
-        const messages = [
-            "🎉 ¡VIAJAMOS EL SÁBADO 22 DE MARZO! 🎉",
-            "✈️ Y volvemos el lunes 24 ✈️",
-            "🌍 No va a hacer falta pasaporte 🌍"
-        ];
-        let index = 0;
-        const card = document.getElementById("card");
-        const message = document.getElementById("message");
-
-        function changeMessage() {
-            card.classList.remove("visible");
-            setTimeout(() => {
-                index = (index + 1) % messages.length;
-                message.innerHTML = messages[index];
-                card.classList.add("visible");
-                if (index < messages.length - 1) {
-                    setTimeout(changeMessage, 3000);
-                }
-            }, 1500);
-        }
-
-        window.onload = () => {
-            card.classList.add("visible");
-            setTimeout(changeMessage, 3000);
-        };
-    </script>
-</body>
-</html>
+            ma
